@@ -1,10 +1,13 @@
 import React from 'react'
-import Nav from "../component/Nav"
+import Card from '../component/Card'
+// import Nav from '../component/Nav'
 const Screen1 = () => {
   return (
     <div>
-    <Nav/>
+      
    
+    <Card/>
+    {/* <Nav/> */}
     </div>
   )
 }
