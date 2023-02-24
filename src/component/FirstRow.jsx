@@ -1,24 +1,21 @@
 import React from "react";
 
 
-const FirstRow = ({ Name,Role,Email,Invite,DOJ }) => {
+const FirstRow = ({ Heading,Number }) => {
   
   return (
-    <div className="mt-10 xl:mx-28 md:mx-8 mx-2 lg:mx-10 xl:mt-0">
-      <div className="relative ">
+    <div className="flex  ">
+       
       
-          <div className=" xl:space-y-2 xl:py-4 ml-2  ">
+          
             
-            <div className="flex xl:ml-32 lg:ml-32  xl:space-x-44 lg:space-x-32 md:ml-20 md:space-x-20 space-x-4  ml-10 border-b-2 border-gray-500">
-            <p className="text-sm   font-semibold ">{Name}</p>
-            <p className="text-sm  ">{Role}</p>
-            <p className="text-xs 	 ">{Email}</p>
-            <p className="text-xs  ">{Invite}</p>
-            <p className="text-xs  ">{DOJ}</p>
+       <div className='flex flex-col   h-[60px] p-4 pt-2 xl:w-[1359px] xl:h-[60px]  md:w-[700px]  lg:w-[980px] lg:h-[60px] w-[90px]  xl:mx-40  lg:mx-12 md:mx-10  drop-shadow-md rounded-2xl bg-[#F8F8F8] justify-between   xl:space-x-80 lg:justify-between md:justify-between 	'>
+            <p className="text-xs   font-semibold ">{Heading}</p>
+            <p className="text-xs  ">{Number}</p>
+            
 
 
-            </div>
-          </div>
+            
           
         </div>
        
