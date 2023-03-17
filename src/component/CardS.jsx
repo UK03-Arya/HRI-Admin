@@ -1,12 +1,12 @@
 import React from "react";
+import ActionScreen from "./Action/ActionScreen";
 import Card1 from "./Card1";
 import Card2 from "./Card2";
-import MessageScreen from "./MessageScreen";
 // import FirstRow from "./FirstRow";
 import Nav from "./Nav";
 // import FirstRow from './FirstRow'
 
-const Card = () => {
+const CardS = () => {
   return (
     <div>
       <Nav />
@@ -15,7 +15,7 @@ const Card = () => {
         <Card2 />
        
 
-       <Card1/>
+       <ActionScreen/>
 
       </div>
    
@@ -24,4 +24,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default CardS;

@@ -21,9 +21,9 @@ const FirstRowData = () => {
      },
   ];
   return (
-    <div>
+    <div className="">
     
-      <div className=" flex flex-wrap space-x-2  xs:pl-10 sm:pl-16 ">
+      <div className=" md:grid grid-cols-3 flex  space-x-2 sm:space-x-0  xs:pl-8  ms:ml-4 ">
         {FirstRow1.map((elem, index) => (
           <FirstRow
             key={index}

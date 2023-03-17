@@ -8,10 +8,10 @@ const FirstRow = ({ Heading,Number }) => {
        
       
           
-            
-       <div className='flex flex-col   h-[60px] p-4 pt-2 xl:w-[1359px] xl:h-[60px]  md:w-[700px]  lg:w-[980px] lg:h-[60px] w-[90px]  xl:mx-40  lg:mx-12 md:mx-10  drop-shadow-md rounded-2xl bg-[#F8F8F8] justify-between   xl:space-x-80 lg:justify-between md:justify-between 	'>
-            <p className="text-xs   font-semibold ">{Heading}</p>
-            <p className="text-xs  ">{Number}</p>
+        
+       <div className='flex flex-col  2xl:h-[100px] 2xl:w-[250px] 2xl:pl-12 2xl:ml-20  h-[60px] p-4 pt-2 mt-2  md:w-[400px]  lg:w-[600px] xl:h-[100px] lg:h-[80px] w-[90px]  md:h-[60px] lg:mx-1   drop-shadow-md rounded-2xl  bg-[#F8F8F8] justify-between sm:w-[140px]  sm:mr-10 xl:ml-10 lg:justify-between md:justify-between lg:mr-4	'>
+            <p className="text-xs xl:text-lg md:text-md  font-semibold ">{Heading}</p>
+            <p className="text-xs md:text-md xl:text-lg ">{Number}</p>
             
 
 

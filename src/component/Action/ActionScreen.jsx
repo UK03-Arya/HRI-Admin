@@ -1,8 +1,7 @@
 import React from 'react'
-import MessageData from './MessageData'
-
+import ActionData from './ActionData'
 // import FirstRow from './FirstRow'
-const Card1 = () => {
+const ActionScreen = () => {
   return (
     <div className=' '>
     
@@ -20,7 +19,7 @@ const Card1 = () => {
             
           
         </div>
-        <MessageData/>
+        <ActionData/>
      </div> 
 
 
@@ -29,4 +28,4 @@ const Card1 = () => {
   )
 }
 
-export default Card1
+export default ActionScreen
