@@ -15,18 +15,18 @@ const QuestBank = () => {
       ];
       return (
         <div className="">
-        <div className='sm:flex sm:flex-row sm:ml-4 md:ml-4 xl:ml-10 '>
+        <div className='sm:flex sm:flex-row sm:ml-4 md:ml-4 xl:ml-8 '>
          <div className="flex xs:w-[260px] ms:w-[255px] md:w-[575px] lg:w-[700px] xl:w-[1000px]  xs:ml-10 xs:mt-28 ms:ml-14 h-8">
         <label className="text-sm text-black font-semibold mt-1">
           Question Bank
         </label>
-        <div className=" flex rounded-3xl xs:ml-6 sm:ml-2   pl-3 xl:w-[800px] md:w-[400px] md:ml-[50px] sm:w-[200px]  lg:w-[500px]  xs:w-[350px] ms:w-[250px]  py-1 border-2 ms:ml-16 border-gray-400    xl:mb-0 md:mb-1  ">
+        <div className=" flex rounded-3xl xs:ml-6 sm:ml-2   pl-3 xl:w-[700px] md:w-[400px] md:ml-[50px] sm:w-[200px]  lg:w-[500px]  xs:w-[350px] ms:w-[250px]  py-1 border-2 ms:ml-16 border-gray-400    xl:mb-0 md:mb-1  ">
           <input
             type="text"
             placeholder="Search team member..."
             className=" lg:text-sm md:text-sm xl:text-sm text-xs "
           />
-          <img src={Search} alt="img" className="w-3 h-3 mt-1 text-xs mr-2 md:ml-48 lg:ml-[250px] xl:ml-[550px] " />
+          <img src={Search} alt="img" className="w-3 h-3 mt-1 xs:mr-2 ms:mr-4 text-xs mr-2 md:ml-48 lg:ml-[250px] xl:ml-[450px] " />
         </div>
       </div>
 

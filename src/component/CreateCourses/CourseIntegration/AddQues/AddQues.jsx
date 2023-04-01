@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Back from "../../../../Assets/Back.png";
 import Search from "../../../../Assets/Search.png";
+import { useNavigate } from 'react-router-dom'
 
 const AddQues = () => {
   const [selectedChoice, setSelectedChoice] = useState(null);
+  const history =useNavigate()
 
   function handleChoiceSelection() {
     setSelectedChoice();
@@ -102,60 +104,63 @@ const AddQues = () => {
         </button>
       </div>
 </div> */}
-<div className='sm:flex sm:flex-row sm:ml-4 md:ml-4 xl:ml-10 '>
-         <div className="flex xs:w-[260px] ms:w-[260px] md:w-[575px] lg:w-[700px] xl:w-[1000px]  xs:ml-10 xs:mt-28 ms:ml-14 h-8">
-        <label className="text-sm text-black font-semibold mt-1">
+<div className='md:flex md:flex-row sm:ml-4 xl:ml-4 '>
+         <div className="flex xs:w-[260px] ms:w-[260px] md:w-[500px] lg:w-[630px] sm:w-[470px] xl:w-[950px]  xs:ml-10 xs:mt-28 ms:ml-10 sm:ml-14 h-8">
+        <label className="text-sm sm:text-lg text-black font-semibold mt-0">
           Question Bank
         </label>
-        <div className=" flex rounded-3xl xs:ml-6 sm:ml-2   pl-2 xl:w-[800px] md:w-[400px] md:ml-[50px] sm:w-[200px] ms:w-[275px]  lg:w-[500px]  xs:w-[350px]   py-1 border-2 ms:ml-16 border-gray-400    xl:mb-0 md:mb-1  ">
+        <div className=" flex rounded-3xl xs:ml-6 sm:ml-24   pl-2 xl:w-[600px] md:w-[250px] md:ml-[20px] sm:w-[250px] ms:w-[275px]  lg:w-[400px]  xs:w-[350px]   py-1 border-2 ms:ml-24 border-gray-400    xl:mb-0 md:mb-1  ">
           <input
             type="text"
             placeholder="Search team member..."
-            className=" lg:text-sm md:text-sm xl:text-sm text-xs "
+            className=" lg:text-sm sm:text-lg  xl:text-sm text-xs "
           />
-          <img src={Search} alt="img" className="w-3 h-3 mt-1 mr-4 text-xs md:ml-48 lg:ml-[250px] xl:ml-[550px] " />
+          <img src={Search} alt="img" className="w-3 h-3 mt-1 mr-4 text-xs md:ml-4 lg:ml-[180px] xl:ml-[350px] " />
         </div>
       </div>
 
-      <div className="xs:ml-10 sm:mt-28 sm:ml-2 xs:space-x-20 xs:mt-8 ms:space-x-32 sm:space-x-2 ms:ml-12     lg:mt-30 ms:mt-8 xl:space-x-16 xl:ml-12 ">
-        <a href='AddQuesForm' className="text-xs  xs:mt-2 p-1 xs:h-[30px] xs:w-[100px]  rounded-2xl border-2 border-orange-400 focus:border-orange-400	 text-orange-400 focus:text-white bg-white focus:bg-orange-400 font-semibold">
+      <div className="xs:ml-10 md:mt-28 sm:ml-14 xs:space-x-20 xs:mt-8 ms:space-x-36  sm:space-x-52 ms:ml-10   md:space-x-1  md:ml-0 lg:mt-30 ms:mt-8 xl:space-x-8 xl:ml-10">
+        <a href='AddQuesForm' className="text-xs sm:text-lg xs:mt-2 p-1 xs:h-[30px] xs:w-[100px]  rounded-2xl border-2 border-orange-400 focus:border-orange-400	 text-orange-400 focus:text-white bg-white focus:bg-orange-400 font-semibold">
           + Add Manually{" "}
         </a>
-        <a href='BulkUpload' className="text-xs p-1 ms:ml-2  rounded-2xl border-2 border-orange-400 focus:border-orange-400	 text-orange-400 focus:text-white bg-white focus:bg-orange-400 font-semibold ">
+        <a href='BulkUpload' className="text-xs sm:text-lg p-1 ms:ml-2  rounded-2xl border-2 border-orange-400 focus:border-orange-400	 text-orange-400 focus:text-white bg-white focus:bg-orange-400 font-semibold ">
           Bulk Upload{" "}
         </a>
       </div>
 </div>
 
-      <div className="flex flex-wrap mt-8 xs:ml-4 ms:ml-10 sm:ml-16 ">
+      <div className="flex flex-wrap mt-8 xs:ml-6 ms:ml-8 sm:ml-16 ">
+      <button onClick={()=>history(-1)}>
+
         <img
           src={Back}
           alt="img"
-          className=" xs:ml-2 xs:w-4 xs:h-4 xs:mt-1  "
+          className=" xs:ml-2 xs:w-4 xs:h-4 xs:mt-1 sm:mt-1.5  "
         />
-        <p className="text-sm text-black xs:ml-4  font-semibold">
+        </button>
+        <p className="text-sm sm:text-lg text-black xs:ml-4  font-semibold">
           Overview of quiz - Prototype
         </p>
       </div>
 
       <div className="">
-        <div className="  xs:grid xs:grid-cols-1 xs:mt-10  flex-wrap ms:ml-6 sm:ml-16  ">
+        <div className="  xs:grid xs:grid-cols-1 xs:mt-10  flex-wrap ms:ml-6 sm:ml-14  ">
           {data.map((elem, index) => (
             <div key={index}>
               <div className="xs:w-[330px] sm:w-[475px] md:w-[800px] lg:w-[900px] xl:w-[1400px] xs:ml-2">
                 <div className="flex">
                   <div className="flex xs:space-x-1">
-                    <p className="text-sm text-black font-semibold">
+                    <p className="text-sm sm:text-lg text-black font-semibold">
                       {elem.QNo}
                     </p>
-                    <p className="text-sm  text-black font-semibold">
+                    <p className="text-sm sm:text-lg   text-black font-semibold">
                       {elem.Qes}
                     </p>
                   </div>
                   {/* <p className="text-sm text-red-600 font-semibold ">{elem.Del}</p> */}
-                  <div className="flex space-x-6 md:ml-60 lg:ml-[350px] xl:ml-[800px]">
-                  <p className=" text-xs font-semibold text-gray-400">View All</p>
-                  <a href="QuestionBank" className=" text-xs font-semibold text-orange-400">Added Question</a>
+                  <div className="flex space-x-6  md:ml-20 lg:ml-[150px] xl:ml-[600px]">
+                  <p className=" text-xs sm:text-lg font-semibold text-gray-400">View All</p>
+                  <a href="QuestionBank" className=" text-xs sm:text-lg font-semibold text-orange-400">Added Question</a>
                   </div>
                 </div>
 
@@ -165,7 +170,7 @@ const AddQues = () => {
                       type="radio"
                       onChange={() => handleChoiceSelection()}
                     />
-                    <label className="text-sm text-gray-500 font-semibold">
+                    <label className="text-sm  sm:text-lg text-gray-500 font-semibold">
                       {elem.Op1}
                     </label>
                   </div>
@@ -174,7 +179,7 @@ const AddQues = () => {
                       type="radio"
                       onChange={() => handleChoiceSelection()}
                     />
-                    <label className="text-sm text-gray-500 font-semibold">
+                    <label className="text-sm sm:text-lg text-gray-500 font-semibold">
                       {elem.Op2}
                     </label>
                   </div>
@@ -183,7 +188,7 @@ const AddQues = () => {
                       type="radio"
                       onChange={() => handleChoiceSelection()}
                     />
-                    <label className="text-sm text-gray-500 font-semibold">
+                    <label className="text-sm sm:text-lg text-gray-500 font-semibold">
                       {elem.Op3}
                     </label>
                   </div>
@@ -192,7 +197,7 @@ const AddQues = () => {
                       type="radio"
                       onChange={() => handleChoiceSelection()}
                     />
-                    <label className="text-sm text-gray-500 font-semibold">
+                    <label className="text-sm sm:text-lg text-gray-500 font-semibold">
                       {elem.Op4}
                     </label>
                   </div>

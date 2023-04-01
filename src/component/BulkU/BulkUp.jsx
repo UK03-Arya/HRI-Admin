@@ -1,16 +1,21 @@
 import React from 'react'
 import Back from "../../../src/Assets/Back.png"
 import { BsFileEarmarkPdfFill } from "react-icons/bs";
+import { useNavigate } from 'react-router-dom'
 
 const BulkUp = () => {
+  const history =useNavigate()
+
   return (
     <div>
     <div className="flex flex-wrap mt-4 xs:ml-4 sm:ml-4 md:ml-8 lg:ml-12 xl:ml-[90px]">
+    <button onClick={()=>history(-1)}>
+
       <img
         src={Back}
         alt="img"
         className=" xs:ml-2 xs:w-4 xs:h-4 xs:mt-1 ms:ml-10  "
-      />
+      /></button>
       <p className="text-sm text-black xs:ml-4  font-semibold">
        Bulk Upload
       </p>

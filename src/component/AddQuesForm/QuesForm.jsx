@@ -1,29 +1,32 @@
 import React from 'react'
 import { useState } from 'react';
 import Back from "../../../src/Assets/Back.png"
+import { useNavigate } from 'react-router-dom'
+
 const QuesForm = () => {
     const [selectedChoice, setSelectedChoice] = useState(null);
-
+    const history =useNavigate()
     function handleChoiceSelection() {
       setSelectedChoice();
     }
   return (
     <div>
-    <div className="flex flex-wrap mt-4 xs:ml-4 sm:ml-14 md:ml-16 ms:ml-8 lg:ml-16 xl:ml-[90px]">
+    <div className="flex flex-wrap mt-4 xs:ml-4 sm:ml-14 md:ml-16 ms:ml-8 lg:ml-16 xl:ml-[60px]">
+    <button onClick={()=>history(-1)}>
         <img
           src={Back}
           alt="img"
           className=" xs:ml-4 xs:w-4 xs:h-4 xs:mt-1 sm:mt-1 "
-        />
+        /></button>
         <p className="text-sm text-black xs:ml-4 sm:text-lg  font-semibold">
          Add question manually
         </p>
       </div>
-      <div className="flex flex-col space-y-3 xs:ml-8 xs:mt-6 md:ml-20  sm:ml-16 ms:ml-12 xl:ml-24">
+      <div className="flex flex-col space-y-3 xs:ml-8 xs:mt-6 md:ml-20  sm:ml-16 ms:ml-12 xl:ml-20">
       <label className="text-sm text-gray-500 font-semibold sm:text-lg ">
                      Topic
                     </label>
-                    <label className="text-sm text-gray-500 font-semibold border-2 border-gray-400 rounded-2xl pt-1 pl-3 xs:w-[250px] sm:w-[350px] xs:h-[30px] ms:w-[300px] md:w-[600px] lg:w-[700px] xl:w-[900px]">
+                    <label className="text-sm text-gray-500 font-semibold border-2 border-gray-400 rounded-2xl pt-1 pl-3 xs:w-[250px] sm:w-[350px] xs:h-[30px] ms:w-[300px] md:w-[600px] lg:w-[600px] xl:w-[700px]">
                   </label>
                    
                  
